@@ -18,6 +18,12 @@
 
 ![chatgpt](assets/images/chatgpt.png)
 
+## 4.智能PDF问答工具
+
+**效果图**
+
+![rag](assets/images/rag.png)
+
 ## How to run
 
 ```bash
