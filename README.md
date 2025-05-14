@@ -12,6 +12,11 @@
 
 ![xiaohongshu](assets/images/xiaohongshu.png)
 
+## 3.克隆ChatGPT
+
+**效果图**
+
+![chatgpt](assets/images/chatgpt.png)
 
 ## How to run
 
