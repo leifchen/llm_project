@@ -1,3 +1,5 @@
+import tempfile
+
 from langchain.chains import ConversationalRetrievalChain
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.embeddings import DashScopeEmbeddings
@@ -14,8 +16,11 @@ def qa_agent(openai_api_key, memory, uploaded_file, question):
     # 读取上传文件的内容
     file_content = uploaded_file.read()
 
-    # 定义临时文件路径
-    temp_file_path = "/tmp/temp.pdf"
+    # 使用 tempfile 创建一个临时文件
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
+        # 将上传文件内容写入临时文件
+        tmp_file.write(uploaded_file.getvalue())
+        temp_file_path = tmp_file.name  # 获取临时文件路径
 
     # 将上传文件的内容写入临时文件
     with open(temp_file_path, "wb") as temp_file:
