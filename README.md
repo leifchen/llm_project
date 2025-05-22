@@ -24,6 +24,10 @@
 
 ![rag](assets/images/rag.png)
 
+## 5.CSV数据分析智能工具
+
+![agent](assets/images/csv_agent.png)
+
 ## How to run
 
 ```bash
